@@ -1,0 +1,42 @@
+.btn__overview {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #e72b2b;
+  border-radius: 0;
+}
+.btn__overview:active {
+  background-color: #e72b2b;
+}
+.btn__overview:focus {
+  background-color: #f09114;
+}
+.btn__internal {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+}
+.btn__internal:active {
+  background-color: #da8612;
+}
+.btn__internal:focus {
+  background-color: #da8612;
+}
+.btn__surface {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+}
+.btn__surface:active {
+  background-color: #da8612;
+}
+.btn__surface:focus {
+  background-color: #da8612;
+}
