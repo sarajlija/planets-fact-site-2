@@ -21,7 +21,7 @@ const AppProvider = ({ children }) => {
       window.removeEventListener("resize", handleWindowResize)
     }
   })
-
+  /*
   const [startSlide, setStartSlide] = useState(true)
   const handleOpenSlide = () => {
     setStartSlide(false)
@@ -35,7 +35,7 @@ const AppProvider = ({ children }) => {
   const handleShow = slide => {
     setShow(true)
     setSelectedSlide(slide.images.gallery)
-  }
+  }*/
   /*
   const toggleIsClose = () => {
     setIsOpenSearch(true)
@@ -67,7 +67,7 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
-        handleOpenSlide,
+        /*  handleOpenSlide,
         handleCloseSlide,
         setStartSlide,
         startSlide,
@@ -75,7 +75,7 @@ const AppProvider = ({ children }) => {
         setShow,
         handleClose,
         handleShow,
-        selectedSlide,
+        selectedSlide,*/
         windowWidth,
         breakpointColumnsObj
       }}

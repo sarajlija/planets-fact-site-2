@@ -1,8 +1,7 @@
 import "./App.css"
 import { Routes, Route } from "react-router-dom"
 import Mercury from "./pages/PlanetMercury/Mercury"
-import Header from "./Header"
-
+import Header from "./components/Header"
 import Earth from "./pages/PlanetEarth/Earth.js"
 import Venus from "./pages/PlanetVenus/Venus.js"
 import Jupiter from "./pages/PlanetJupiter/Jupiter.js"

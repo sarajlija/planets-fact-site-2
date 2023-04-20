@@ -6,35 +6,38 @@ import data from "../../data.json"
 import "./Mercury.css"
 
 function Mercury() {
-  const [mercury, setMercury] = useState(true)
+  const [value, setValue] = useState(0)
+
+  const { name, overview, structure, geology, rotation, revolution, radius, temperature, images } = data[0]
 
   return (
     <Container>
       <Row>
         <Col md={6} className="d-flex justify-content-center align-items-center">
-          <Image fluid src={mercury ? data[0].images.internal : data[0].images.geology ? data[0].images.planet : null} />
+          <Image fluid src={value === 0 ? images.planet : value === 1 ? images.internal : images.geology} />
         </Col>
         <Col md={6} className="">
           <Card>
             <Card.Body className="text-light">
-              <Card.Title as="h1">{data[0].name}</Card.Title>
-              <Card.Text>{data[0].overview.content}</Card.Text>
+              <Card.Title as="h1">{name}</Card.Title>
+              <Card.Text>{value === 0 ? overview.content : value === 1 ? structure.content : geology.content}</Card.Text>
               <Card.Text>
                 Source:
-                <a href={data[0].overview.source} className="me-2 ms-2">
+                <a href={overview.source} className="me-2 ms-2">
                   Wikipedia
                   <Image fluid src="./assets/icon-source.svg" />
                 </a>
               </Card.Text>
             </Card.Body>
+
             <div className="d-grid gap-2 w-100">
-              <Button variant="outline-light" className="rounded-0" bsPrefix="btn__overview" onClick={() => setMercury(true)}>
+              <Button variant="outline-light" className={` ${0 === value && "active"}`} bsPrefix="btn__overview" onClick={() => setValue(0)}>
                 <span className="me-2">01</span>overveiw
               </Button>
-              <Button variant="outline-light" className="rounded-0" bsPrefix="btn__internal" onClick={() => setMercury(false)}>
+              <Button variant="outline-light" className={` ${1 === value && "active"}`} bsPrefix="btn__internal" onClick={() => setValue(1)}>
                 <span className="me-2">01</span>internal structure
               </Button>
-              <Button variant="outline-light" className="rounded-0" bsPrefix="btn__surface" onClick={() => setMercury(true)}>
+              <Button variant="outline-light" className={` ${2 === value && "active"}`} bsPrefix="btn__surface" onClick={() => setValue(2)}>
                 <span className="me-2">01</span>surface geology
               </Button>
             </div>
@@ -46,7 +49,7 @@ function Mercury() {
           <Card bsPrefix="card__footer">
             <Card.Body>
               <Card.Title bsPrefix="">ROTATION TIME</Card.Title>
-              <Card.Footer as="h1">{data[0].rotation}</Card.Footer>
+              <Card.Footer as="h1">{rotation}</Card.Footer>
             </Card.Body>
           </Card>
         </Col>
@@ -54,7 +57,7 @@ function Mercury() {
           <Card bsPrefix="card__footer">
             <Card.Body>
               <Card.Title>REVOLUTION TIME</Card.Title>
-              <Card.Footer as="h1">{data[0].revolution}</Card.Footer>
+              <Card.Footer as="h1">{revolution}</Card.Footer>
             </Card.Body>
           </Card>
         </Col>
@@ -62,7 +65,7 @@ function Mercury() {
           <Card bsPrefix="card__footer">
             <Card.Body>
               <Card.Title>radius</Card.Title>
-              <Card.Footer as="h1">{data[0].radius}</Card.Footer>
+              <Card.Footer as="h1">{radius}</Card.Footer>
             </Card.Body>
           </Card>
         </Col>
@@ -70,7 +73,7 @@ function Mercury() {
           <Card bsPrefix="card__footer">
             <Card.Body>
               <Card.Title>AVERAGE TEMP.</Card.Title>
-              <Card.Footer as="h1">{data[0].temperature}</Card.Footer>
+              <Card.Footer as="h1">{temperature}</Card.Footer>
             </Card.Body>
           </Card>
         </Col>
