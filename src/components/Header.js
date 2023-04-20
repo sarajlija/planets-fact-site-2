@@ -17,13 +17,13 @@ function Header() {
           The planets
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll" className="">
-          <Nav className="ms-auto my-2 my-lg-0" style={{ maxHeight: "85px" }} navbarScroll>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav" className="">
+          <Nav className="ms-auto my-2 my-lg-0">
             {data.map((item, index) => (
               <LinkContainer key={item.name} to={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} onClick={() => setValueHeader(index)}>
                 <Nav.Item>
-                  <Nav.Link href={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} bsPrefix="nav-link__mercury" className={` ${index === valueHeader && "active"}`}>
+                  <Nav.Link href={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} bsPrefix={`nav-link__${item.name.toLowerCase()}`} className={` ${index === valueHeader && "active"}`}>
                     {item.name}
                   </Nav.Link>
                 </Nav.Item>

@@ -2,6 +2,7 @@
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
+  font-size: 12px;
   border: 1px solid #ffffff;
   background-color: transparent;
   border-radius: 0;
@@ -15,6 +16,7 @@
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
+  font-size: 12px;
   background-color: transparent;
   border: 1px solid #ffffff;
   border-radius: 0;
@@ -28,6 +30,7 @@
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
+  font-size: 12px;
   background-color: transparent;
   border: 1px solid #ffffff;
   border-radius: 0;

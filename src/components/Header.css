@@ -23,11 +23,31 @@
   padding: 14px;
   transition: all 0.2s ease-in;
 }
-.nav-link__mercury.active {
+/*.nav-link__mercury.active {
   color: #ffffff !important;
-  border-top: 5px solid goldenrod;
-}
+  border-top: 5px solid #419EBB;
+}*/
 .nav-link__mercury:hover {
   color: #ffffff !important;
-  border-top: 5px solid goldenrod;
+  border-top: 5px solid #419ebb;
+}
+/*VENUS*/
+
+.nav-link__venus {
+  font-size: 11px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.75;
+  letter-spacing: 1px;
+  padding: 14px;
+  transition: all 0.2s ease-in;
+}
+/*.nav-link__venus.active {
+  color: #ffffff !important;
+  border-top: 5px solid #419EBB;
+}*/
+.nav-link__venus:hover {
+  color: #ffffff !important;
+  border-top: 5px solid #eda249;
 }
