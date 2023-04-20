@@ -8,8 +8,7 @@ import data from "../data.json"
 
 function Header() {
   const [valueHeader, setValueHeader] = useState(0)
-  const [links, setLinks] = useState(data)
-  const { name } = links[valueHeader]
+  const { name } = data[valueHeader]
   console.log(name)
   return (
     <Navbar bg="" expand="sm">
@@ -21,7 +20,7 @@ function Header() {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll" className="">
           <Nav className="ms-auto my-2 my-lg-0" style={{ maxHeight: "85px" }} navbarScroll>
-            {links.map((item, index) => (
+            {data.map((item, index) => (
               <LinkContainer key={item.name} to={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} onClick={() => setValueHeader(index)}>
                 <Nav.Item>
                   <Nav.Link href={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} bsPrefix="nav-link__mercury" className={` ${index === valueHeader && "active"}`}>

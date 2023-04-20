@@ -1,0 +1,47 @@
+.btn__overview__venus {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  border-radius: 0;
+  transition: all 0.3s ease-in;
+}
+.btn__overview__venus.active {
+  background-color: #e72b2b;
+}
+
+.btn__internal__venus {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  transition: all 0.3s ease-in;
+}
+.btn__internal__venus.active {
+  background-color: #da8612;
+}
+
+.btn__surface__venus {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  transition: all 0.3s ease-in;
+}
+.btn__surface__venus.active {
+  background-color: #da8612;
+}
+.btn__overview__mercury:hover {
+  background-color: #38384f;
+}
+.btn__internal__mercury:hover {
+  background-color: #38384f;
+}
+.btn__surface__mercury:hover {
+  background-color: #38384f;
+}

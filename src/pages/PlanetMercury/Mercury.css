@@ -1,4 +1,4 @@
-.btn__overview {
+.btn__overview__mercury {
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
@@ -7,11 +7,11 @@
   border-radius: 0;
   transition: all 0.3s ease-in;
 }
-.btn__overview.active {
-  background-color: #e72b2b;
+.btn__overview__mercury.active {
+  background-color: #419ebb;
 }
 
-.btn__internal {
+.btn__internal__mercury {
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
@@ -20,11 +20,11 @@
   border-radius: 0;
   transition: all 0.3s ease-in;
 }
-.btn__internal.active {
-  background-color: #da8612;
+.btn__internal__mercury.active {
+  background-color: #419ebb;
 }
 
-.btn__surface {
+.btn__surface__mercury {
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
@@ -33,6 +33,15 @@
   border-radius: 0;
   transition: all 0.3s ease-in;
 }
-.btn__surface.active {
-  background-color: #da8612;
+.btn__surface__mercury.active {
+  background-color: #419ebb;
+}
+.btn__overview__mercury:hover {
+  background-color: #38384f;
+}
+.btn__internal__mercury:hover {
+  background-color: #38384f;
+}
+.btn__surface__mercury:hover {
+  background-color: #38384f;
 }
