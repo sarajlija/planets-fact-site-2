@@ -51,3 +51,39 @@
   color: #ffffff !important;
   border-top: 5px solid #eda249;
 }
+
+/*EARTH*/
+.nav-link__earth {
+  font-size: 11px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.75;
+  letter-spacing: 1px;
+  padding: 14px;
+  transition: all 0.2s ease-in;
+}
+/*.nav-link__venus.active {
+  color: #ffffff !important;
+  border-top: 5px solid #419EBB;
+}*/
+.nav-link__earth:hover {
+  color: #ffffff !important;
+  border-top: 5px solid #6d2ed5;
+}
+/*EMARS*/
+.nav-link__mars {
+  font-size: 11px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.75;
+  letter-spacing: 1px;
+  padding: 14px;
+  transition: all 0.2s ease-in;
+}
+
+.nav-link__mars:hover {
+  color: #ffffff !important;
+  border-top: 5px solid #d14c32;
+}
