@@ -1,0 +1,249 @@
+@import "./variables";
+@mixin button-planets {
+  display: flex;
+  padding: 12px 28px;
+  color: $white;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 0;
+  transition: all 0.3s ease-in;
+}
+/*MERCURY*/
+.btn__overview__mercury {
+  @include button-planets;
+  &.active {
+    background-color: $bg-mercury;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+.btn__internal__mercury {
+  @include button-planets;
+  &.active {
+    background-color: $bg-mercury;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+.btn__surface__mercury {
+  @include button-planets;
+  &.active {
+    background-color: $bg-mercury;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+/*VENUS*/
+.btn__overview__venus {
+  @include button-planets;
+  &.active {
+    background-color: $bg-venus;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+.btn__internal__venus {
+  @include button-planets;
+  &.active {
+    background-color: $bg-venus;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+.btn__surface__venus {
+  @include button-planets;
+  &.active {
+    background-color: $bg-venus;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+/*EARTH*/
+.btn__overview__earth {
+  @include button-planets;
+  &.active {
+    background-color: $bg-earth;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+.btn__internal__earth {
+  @include button-planets;
+  &.active {
+    background-color: $bg-earth;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+.btn__surface__earth {
+  @include button-planets;
+  &.active {
+    background-color: $bg-earth;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+/*MARS*/
+.btn__overview__mars {
+  @include button-planets;
+  &.active {
+    background-color: $bg-mars;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+.btn__internal__mars {
+  @include button-planets;
+  &.active {
+    background-color: $bg-mars;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+.btn__surface__mars {
+  @include button-planets;
+  &.active {
+    background-color: $bg-mars;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+/*JUPITER*/
+.btn__overview__jupiter {
+  @include button-planets;
+  &.active {
+    background-color: $bg-jupiter;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+.btn__internal__jupiter {
+  @include button-planets;
+  &.active {
+    background-color: $bg-jupiter;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+.btn__surface__jupiter {
+  @include button-planets;
+  &.active {
+    background-color: $bg-jupiter;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+/*SATURN*/
+.btn__overview__saturn {
+  @include button-planets;
+  &.active {
+    background-color: $bg-saturn;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+.btn__internal__saturn {
+  @include button-planets;
+  &.active {
+    background-color: $bg-saturn;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+.btn__surface__saturn {
+  @include button-planets;
+  &.active {
+    background-color: $bg-saturn;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+/*URANUS*/
+.btn__overview__uranus {
+  @include button-planets;
+  &.active {
+    background-color: $bg-uranus;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+.btn__internal__uranus {
+  @include button-planets;
+  &.active {
+    background-color: $bg-uranus;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+.btn__surface__uranus {
+  @include button-planets;
+  &.active {
+    background-color: $bg-uranus;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+/*NEPTUNE*/
+.btn__overview__neptune {
+  @include button-planets;
+  &.active {
+    background-color: $bg-neptune;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+.btn__internal__neptune {
+  @include button-planets;
+  &.active {
+    background-color: $bg-neptune;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+.btn__surface__neptune {
+  @include button-planets;
+  &.active {
+    background-color: $bg-neptune;
+  }
+  &:hover {
+    background-color: $bg-hover;
+  }
+}

@@ -1,0 +1,35 @@
+@import "./variables";
+@mixin flex-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.container {
+  width: 75%;
+}
+/*CARD_BODY*/
+.card {
+  height: 70%;
+  @include flex-card;
+  background-color: $bg-navbar;
+  margin-top: 80px;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+.card-title {
+  font-family: "Antonio", sans-serif;
+  font-size: 80px;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+}
+.card-text {
+  width: 350px;
+  font-family: "League Spartan", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+}

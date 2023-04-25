@@ -1,8 +1,9 @@
 import React, { useState } from "react"
 import { Col, Container, Row, Image, Button } from "react-bootstrap"
 import Card from "react-bootstrap/Card"
+import Nav from "react-bootstrap/Nav"
 import data from "../../data.json"
-import "./Mercury.css"
+//import "./Mercury.css"
 
 function Mercury() {
   const [value, setValue] = useState(0)
@@ -30,20 +31,20 @@ function Mercury() {
             </Card.Body>
 
             <div className="d-grid gap-2 w-100">
-              <Button variant="outline-light" className={`text-uppercase ${0 === value && "active"}`} bsPrefix="btn__overview__mercury" onClick={() => setValue(0)}>
+              <Button variant="outline-light" className={` ${0 === value && "active"}`} bsPrefix="btn__overview__mercury" onClick={() => setValue(0)}>
                 <span className="me-2">01</span>overveiw
               </Button>
-              <Button variant="outline-light" className={`text-uppercase ${1 === value && "active"}`} bsPrefix="btn__internal__mercury" onClick={() => setValue(1)}>
+              <Button variant="outline-light" className={` ${1 === value && "active"}`} bsPrefix="btn__internal__mercury" onClick={() => setValue(1)}>
                 <span className="me-2">01</span>internal structure
               </Button>
-              <Button variant="outline-light" className={`text-uppercase ${2 === value && "active"}`} bsPrefix="btn__surface__mercury" onClick={() => setValue(2)}>
+              <Button variant="outline-light" className={` ${2 === value && "active"}`} bsPrefix="btn__surface__mercury" onClick={() => setValue(2)}>
                 <span className="me-2">01</span>surface geology
               </Button>
             </div>
           </Card>
         </Col>
       </Row>
-      <Row xs={1} md={4} className="g-4 mb-5 ">
+      <Row xs={1} md={4} className="g-4 ">
         <Col>
           <Card bsPrefix="card__footer">
             <Card.Body>

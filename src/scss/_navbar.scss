@@ -1,0 +1,38 @@
+@import "./variables";
+
+.navbar {
+  background-color: $bg-navbar;
+  padding: 0;
+}
+.navbar-brand {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: -1.05px;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  color: transparent;
+}
+.navbar-toggler-icon {
+  background-image: url("/public/assets/icon-hamburger.svg");
+  color: #ffffff;
+}
+.nav {
+  flex-direction: column;
+}
+
+.nav-link,
+.nav-link.active,
+.nav-pills,
+.nav-pills.active {
+  display: block;
+  background-color: transparent;
+}
+.nav__mercury {
+  width: 100%;
+  flex-direction: column;
+}
