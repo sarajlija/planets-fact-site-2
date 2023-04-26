@@ -5,8 +5,18 @@
   justify-content: space-around;
 }
 
-.container {
+.container__card {
   width: 75%;
+  margin: auto;
+  @media (max-width: 768px) {
+    margin-top: 4rem;
+  }
+
+  @media (max-width: 568px) {
+    margin-top: 4rem;
+
+    width: 90%;
+  }
 }
 /*CARD_BODY*/
 .card {

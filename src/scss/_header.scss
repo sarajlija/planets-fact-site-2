@@ -1,145 +1,126 @@
 @import "./variables";
-@import "./resets";
-
-.nav-link__mercury {
+//@import "./resets";
+@mixin header {
   font-size: 11px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
+  color: $white;
   opacity: 0.75;
   letter-spacing: 1px;
   padding: 14px;
   transition: all 0.3s ease-in;
 }
-/*.nav-link__mercury.active {
-  color: #ffffff !important;
-  border-top: 5px solid #419EBB;
-}*/
-.nav-link__mercury:hover {
-  color: #ffffff !important;
-  border-top: 3px solid #419ebb;
+.container__header {
+  width: 75%;
+  margin: auto;
+
+  @media (max-width: 568px) {
+    justify-content: space-between;
+    flex-direction: column;
+  }
 }
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 568px) {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 2;
+  }
+}
+.navbar-collapse {
+  @media (max-width: 568px) {
+    height: 100vh !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #070724;
+    z-index: 1;
+  }
+}
+.navbar-nav {
+  @media (max-width: 568px) {
+    margin-left: 0 !important;
+  }
+}
+
+/*MERCURY*/
+
+.nav-link__mercury {
+  @include header;
+  &:hover {
+    color: $white !important;
+    border-top: 3px solid $bg-mercury;
+  }
+}
+
 /*VENUS*/
 
 .nav-link__venus {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in;
-}
-/*.nav-link__venus.active {
-  color: #ffffff !important;
-  border-top: 5px solid #419EBB;
-}*/
-.nav-link__venus:hover {
-  color: #ffffff !important;
-  border-top: 3px solid #eda249;
+  @include header;
+  &:hover {
+    color: $white !important;
+    border-top: 3px solid $bg-venus;
+  }
 }
 
 /*EARTH*/
 .nav-link__earth {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in;
-}
-/*.nav-link__venus.active {
-  color: #ffffff !important;
-  border-top: 5px solid #419EBB;
-}*/
-.nav-link__earth:hover {
-  color: #ffffff !important;
-  border-top: 3px solid #6d2ed5;
-}
-/*MARS*/
-.nav-link__mars {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in;
+  @include header;
+  &:hover {
+    color: $white !important;
+    border-top: 3px solid $bg-earth;
+  }
 }
 
-.nav-link__mars:hover {
-  color: #ffffff !important;
-  border-top: 3px solid #d14c32;
+/*MARS*/
+.nav-link__mars {
+  @include header;
+  &:hover {
+    color: $white !important;
+    border-top: 3px solid $bg-mars;
+  }
 }
 
 /*Jupiter*/
 .nav-link__jupiter {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link__jupiter:hover {
-  color: #ffffff !important;
-  border-top: 3px solid #d83a34;
+  @include header;
+  &:hover {
+    color: $white !important;
+    border-top: 3px solid $bg-jupiter;
+  }
 }
 
 /*Saturn*/
 .nav-link__saturn {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link__saturn:hover {
-  color: #ffffff !important;
-  border-top: 3px solid #cd5120;
+  @include header;
+  &:hover {
+    color: $white !important;
+    border-top: 3px solid $bg-saturn;
+  }
 }
 
 /*Uranus*/
 .nav-link__uranus {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link__uranus:hover {
-  color: #ffffff !important;
-  border-top: 3px solid #1ec1a2;
+  @include header;
+  &:hover {
+    color: $white !important;
+    border-top: 3px solid $bg-uranus;
+  }
 }
 
 /*Neptune*/
 .nav-link__neptune {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link__neptune:hover {
-  color: #ffffff !important;
-  border-top: 3px solid #1ec1a2;
+  @include header;
+  &:hover {
+    color: $white !important;
+    border-top: 3px solid $bg-neptune;
+  }
 }

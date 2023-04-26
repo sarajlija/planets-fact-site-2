@@ -11,7 +11,7 @@ function Mercury() {
   const { name, overview, structure, geology, rotation, revolution, radius, temperature, images } = data[0]
 
   return (
-    <Container>
+    <Container bsPrefix="container__card">
       <Row>
         <Col md={6} className="d-flex justify-content-center align-items-center">
           <Image fluid src={value === 0 ? images.planet : value === 1 ? images.internal : images.geology} />
