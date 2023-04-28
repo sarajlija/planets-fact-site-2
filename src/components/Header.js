@@ -6,10 +6,15 @@ import Navbar from "react-bootstrap/Navbar"
 import { LinkContainer } from "react-router-bootstrap"
 import data from "../data.json"
 
-function Header() {
+function Header({ windowWith }) {
   const [valueHeader, setValueHeader] = useState(0)
   const { name } = data[valueHeader]
   console.log(name)
+
+  const handleClick = index => {
+    setValueHeader(index)
+  }
+
   return (
     <Navbar bg="" expand="sm">
       <Container className="align-items-center d-flex justify-content-md-center flex-sm-column flex-md-row justify-content-sm-between" bsPrefix="container__header">
@@ -20,10 +25,10 @@ function Header() {
 
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         </div>
-        <Navbar.Collapse id="responsive-navbar-nav" className="">
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto my-2 my-lg-0">
             {data.map((item, index) => (
-              <LinkContainer key={item.name} to={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} onClick={() => setValueHeader(index)}>
+              <LinkContainer key={item.name} to={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} onClick={() => handleClick(index)}>
                 <Nav.Item>
                   <Nav.Link href={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} bsPrefix={`nav-link__${item.name.toLowerCase()}`} className={` ${index === valueHeader && "active"}`}>
                     {item.name}

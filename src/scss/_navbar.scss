@@ -36,3 +36,6 @@
   width: 100%;
   flex-direction: column;
 }
+.collapse:not(.show) {
+  display: none;
+}

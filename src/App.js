@@ -1,4 +1,5 @@
 import "./App.css"
+import { useEffect, useState } from "react"
 import { Routes, Route } from "react-router-dom"
 import Mercury from "./pages/PlanetMercury/Mercury"
 import Header from "./components/Header"
@@ -11,9 +12,23 @@ import Saturn from "./pages/PlanetSaturn/Saturn"
 import Mars from "./pages/PlanetMar/Mars"
 
 function App() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth)
+    }
+
+    window.addEventListener("resize", handleWindowResize)
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize)
+    }
+  })
+  console.log(windowWidth)
   return (
     <main className="h-100">
-      <Header />
+      <Header windowWidth={windowWidth} />
       <hr className="text-light my-0 " />
       {/*<Planets />*/}
 
