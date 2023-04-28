@@ -8,11 +8,15 @@ import data from "../data.json"
 
 function Header({ windowWith }) {
   const [valueHeader, setValueHeader] = useState(0)
+  const [state, setState] = useState(false)
   const { name } = data[valueHeader]
   console.log(name)
 
   const handleClick = index => {
     setValueHeader(index)
+  }
+  const showPlanet = () => {
+    setState(true)
   }
 
   return (
@@ -25,12 +29,12 @@ function Header({ windowWith }) {
 
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         </div>
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav" className={`${console.log(state)}`}>
           <Nav className="ms-auto my-2 my-lg-0">
             {data.map((item, index) => (
               <LinkContainer key={item.name} to={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} onClick={() => handleClick(index)}>
                 <Nav.Item>
-                  <Nav.Link href={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} bsPrefix={`nav-link__${item.name.toLowerCase()}`} className={` ${index === valueHeader && "active"}`}>
+                  <Nav.Link onClick={() => showPlanet()} href={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} bsPrefix={`nav-link__${item.name.toLowerCase()}`} className={` ${index === valueHeader && "active"}`}>
                     {item.name}
                   </Nav.Link>
                 </Nav.Item>
