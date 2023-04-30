@@ -11,9 +11,13 @@
 }
 
 .nav-item {
+  width: 100%;
   cursor: pointer;
+  border-bottom: 0;
+  @media (max-width: 568px) {
+    margin-left: 0 !important;
+  }
 }
-
 .navbar-toggler {
   color: transparent;
 }
@@ -29,13 +33,13 @@
 .nav-link.active,
 .nav-pills,
 .nav-pills.active {
+  width: 100%;
   display: block;
   background-color: transparent;
+  margin: 5px 0;
+  border-bottom: 2px solid #fff;
 }
 .nav__mercury {
   width: 100%;
   flex-direction: column;
-}
-.collapse:not(.show) {
-  display: none;
 }

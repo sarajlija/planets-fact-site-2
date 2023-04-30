@@ -14,6 +14,57 @@ body {
   background-image: url("/public/assets/background-stars.svg");
 }
 
+.navbar {
+  background-color: #070724;
+  padding: 0;
+}
+
+.navbar-brand {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: -1.05px;
+}
+
+.nav-item {
+  width: 100%;
+  cursor: pointer;
+  border-bottom: 0;
+}
+@media (max-width: 568px) {
+  .nav-item {
+    margin-left: 0 !important;
+  }
+}
+
+.navbar-toggler {
+  color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("/public/assets/icon-hamburger.svg");
+  color: #ffffff;
+}
+
+.nav {
+  flex-direction: column;
+}
+
+.nav-link,
+.nav-link.active,
+.nav-pills,
+.nav-pills.active {
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  margin: 5px 0;
+  border-bottom: 2px solid #fff;
+}
+
+.nav__mercury {
+  width: 100%;
+  flex-direction: column;
+}
+
 .container__header {
   width: 75%;
   margin: auto;
@@ -46,17 +97,22 @@ body {
     height: 100vh !important;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
     background-color: #070724;
     z-index: 1;
+    transition: all 0.3s ease-in;
   }
 }
 
+.navbar-nav {
+  border-bottom: 0;
+}
 @media (max-width: 568px) {
   .navbar-nav {
     margin-left: 0 !important;
+    width: 100%;
   }
 }
 
@@ -74,6 +130,36 @@ body {
 .nav-link__mercury:hover {
   color: #ffffff !important;
   border-top: 3px solid #419ebb;
+}
+@media (max-width: 568px) {
+  .nav-link__mercury {
+    font-size: 11px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.75;
+    letter-spacing: 1px;
+    padding: 14px;
+    transition: all 0.3s ease-in;
+    position: relative;
+    margin: 5px 0;
+    border-bottom: 2px solid #fff;
+  }
+  .nav-link__mercury::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    top: 1rem;
+    left: 0.5rem;
+    height: 20px;
+    border: 2px solid green;
+    background: #c91515;
+    border-radius: 50%;
+  }
+  .nav-link__mercury:hover {
+    color: #ffffff !important;
+    border-top: 0;
+  }
 }
 
 /*VENUS*/
@@ -186,47 +272,6 @@ body {
 .nav-link__neptune:hover {
   color: #ffffff !important;
   border-top: 3px solid #2d68f0;
-}
-
-.navbar {
-  background-color: #070724;
-  padding: 0;
-}
-
-.navbar-brand {
-  font-size: 28px;
-  text-transform: uppercase;
-  letter-spacing: -1.05px;
-}
-
-.nav-item {
-  cursor: pointer;
-}
-
-.navbar-toggler {
-  color: transparent;
-}
-
-.navbar-toggler-icon {
-  background-image: url("/public/assets/icon-hamburger.svg");
-  color: #ffffff;
-}
-
-.nav {
-  flex-direction: column;
-}
-
-.nav-link,
-.nav-link.active,
-.nav-pills,
-.nav-pills.active {
-  display: block;
-  background-color: transparent;
-}
-
-.nav__mercury {
-  width: 100%;
-  flex-direction: column;
 }
 
 .container__card {

@@ -38,16 +38,20 @@
     height: 100vh !important;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
     background-color: #070724;
     z-index: 1;
+    transition: all 0.3s ease-in;
   }
 }
+
 .navbar-nav {
+  border-bottom: 0;
   @media (max-width: 568px) {
     margin-left: 0 !important;
+    width: 100%;
   }
 }
 
@@ -55,9 +59,31 @@
 
 .nav-link__mercury {
   @include header;
+
   &:hover {
     color: $white !important;
     border-top: 3px solid $bg-mercury;
+  }
+  @media (max-width: 568px) {
+    @include header;
+    position: relative;
+    margin: 5px 0;
+    border-bottom: 2px solid #fff;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      top: 1rem;
+      left: 0.5rem;
+      height: 20px;
+      border: 2px solid green;
+      background: #c91515;
+      border-radius: 50%;
+    }
+    &:hover {
+      color: $white !important;
+      border-top: 0;
+    }
   }
 }
 
