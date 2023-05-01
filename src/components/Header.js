@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Container from "react-bootstrap/Container"
-import Nav from "react-bootstrap/Nav"
-import Navbar from "react-bootstrap/Navbar"
+import { Nav, Navbar } from "react-bootstrap"
+
 //import "./Header.css"
 import { LinkContainer } from "react-router-bootstrap"
 import data from "../data.json"
@@ -27,7 +27,6 @@ function Header({ windowWith }) {
         </div>
 
         <Navbar.Collapse id="">
-          {" "}
           <Nav className="ms-auto my-2 my-lg-0">
             {data.map((item, index) => (
               <LinkContainer key={item.name} to={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} onClick={() => handleClick(index)}>
