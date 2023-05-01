@@ -35,10 +35,10 @@ function Mercury() {
                 <span className="me-2">01</span>overveiw
               </Button>
               <Button variant="outline-light" className={` ${1 === value && "active"}`} bsPrefix="btn__internal__mercury" onClick={() => setValue(1)}>
-                <span className="me-2">01</span>internal structure
+                <span className="me-2">02</span>internal structure
               </Button>
               <Button variant="outline-light" className={` ${2 === value && "active"}`} bsPrefix="btn__surface__mercury" onClick={() => setValue(2)}>
-                <span className="me-2">01</span>surface geology
+                <span className="me-2">03</span>surface geology
               </Button>
             </div>
           </Card>

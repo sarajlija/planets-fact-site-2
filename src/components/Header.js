@@ -27,7 +27,7 @@ function Header({ windowWith }) {
         </div>
 
         <Navbar.Collapse id="">
-          <Nav className="ms-auto my-2 my-lg-0">
+          <Nav className="ms-auto">
             {data.map((item, index) => (
               <LinkContainer key={item.name} to={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} onClick={() => handleClick(index)}>
                 <Nav.Item>
