@@ -7,7 +7,7 @@
   color: $white;
   opacity: 0.75;
   letter-spacing: 1px;
-  /*padding: 14px;*/
+  padding: 14px;
   transition: all 0.3s ease-in;
 }
 
@@ -72,30 +72,29 @@
 
 .navbar-nav {
   @media (max-width: 568px) {
+    position: absolute;
     width: 100%;
-
-    display: flex;
+    display: block;
     height: 100%;
-    justify-content: center;
-    align-items: center;
+    top: 2rem;
   }
 }
 .nav-item {
   width: 100%;
   cursor: pointer;
-  margin-left: 10px;
 
+  &:hover {
+    color: #ffffff !important;
+
+    opacity: 1;
+  }
   @media (max-width: 568px) {
     width: 85%;
     cursor: pointer;
     margin: 0 auto;
-    padding: 22px 0;
+
     &:not(:last-child) {
       border-bottom: 1px solid #ffffff;
-      opacity: 1;
-    }
-    &:hover {
-      color: #ffffff !important;
       opacity: 1;
     }
   }
@@ -104,12 +103,11 @@
 /*MERCURY*/
 
 .nav-link__mercury {
+  @include header;
   display: inline-block;
   height: 100%;
+  padding: 14px;
 
-  @include header;
-
-  margin-left: 2rem;
   &:hover {
     border-top: 1px solid $bg-mercury;
   }
@@ -130,8 +128,8 @@
       top: 0;
       left: -35px;
       height: 20px;
-      background: $bg-mercury;
       border-radius: 50%;
+      background: $bg-mercury;
     }
     &:hover {
       color: $white !important;
