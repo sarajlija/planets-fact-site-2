@@ -24,6 +24,9 @@
   @include flex-card;
   background-color: $bg-navbar;
   margin-top: 80px;
+  @media (max-width: 568px) {
+    flex-direction: column-reverse;
+  }
 }
 .card-body {
   display: flex;

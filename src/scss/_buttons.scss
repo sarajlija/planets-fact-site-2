@@ -10,6 +10,28 @@
   text-transform: uppercase;
   transition: all 0.3s ease-in;
 }
+@mixin button-planets-mobile {
+  display: flex;
+  padding: 12px 28px;
+  color: $white;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+
+.btn__container {
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+  @media (max-width: 568px) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 /*MERCURY*/
 .btn__overview__mercury {
   @include button-planets;
@@ -18,6 +40,9 @@
   }
   &:hover {
     background-color: $bg-hover;
+  }
+  @media (max-width: 568px) {
+    width: 33%;
   }
 }
 .btn__internal__mercury {

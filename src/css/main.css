@@ -374,6 +374,12 @@ body {
   }
 }
 
+.btn__container {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+}
+
 /*CARD_BODY*/
 .card {
   height: 70%;
@@ -382,6 +388,11 @@ body {
   justify-content: space-around;
   background-color: #070724;
   margin-top: 80px;
+}
+@media (max-width: 568px) {
+  .card {
+    flex-direction: column-reverse;
+  }
 }
 
 .card-body {
@@ -873,4 +884,4 @@ body {
   line-height: 52px;
   color: #ffffff;
   opacity: 1;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
