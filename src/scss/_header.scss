@@ -1,6 +1,6 @@
 @import "./variables";
 //@import "./resets";
-@mixin header {
+/*@mixin header {
   font-size: 11px;
   text-transform: uppercase;
   text-decoration: none;
@@ -9,7 +9,7 @@
   letter-spacing: 1px;
   padding: 14px;
   transition: all 0.3s ease-in;
-}
+}*/
 
 .navbar {
   background-color: $bg-navbar;
@@ -24,9 +24,9 @@
 .navbar-toggler {
   color: transparent;
 }
+
 .navbar-toggler-icon {
   background-image: url("/public/assets/icon-hamburger.svg");
-  color: #ffffff;
 }
 
 .container__header {
@@ -65,7 +65,6 @@
     position: absolute;
     background-color: #070724;
     z-index: 1;
-    transform: translateX(-100);
     transition: all 0.3s ease-in;
   }
 }
@@ -85,9 +84,9 @@
 
   &:hover {
     color: #ffffff !important;
-
     opacity: 1;
   }
+
   @media (max-width: 568px) {
     width: 85%;
     cursor: pointer;
@@ -99,21 +98,65 @@
     }
   }
 }
+.nav-link {
+  display: block;
+  color: $white !important;
+  opacity: 0.75;
+  padding: 12px;
+  &:hover {
+    color: $white !important;
+  }
+  &.active {
+    opacity: 1 !important;
+  }
+  @media (max-width: 568px) {
+    position: relative;
+    margin-left: 30px;
+    padding: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      top: 30px;
+      left: -35px;
+      height: 20px;
+      border-radius: 50%;
+    }
+  }
+}
 
 /*MERCURY*/
-
 .nav-link__mercury {
-  @include header;
+  /*@include header;*/
+  &:hover {
+    color: $white !important;
+    border-top: 3px solid $bg-earth;
+  }
+  @media (max-width: 568px) {
+    &::before {
+      background: $bg-mercury;
+    }
+    &:hover {
+      border-top: 0;
+    }
+  }
+}
+
+/*
+.nav-link__mercury {
   display: inline-block;
   height: 100%;
   padding: 14px;
 
   &:hover {
     border-top: 1px solid $bg-mercury;
+    color: $white !important;
   }
   @media (max-width: 568px) {
     @include header;
-    position: relative;
+
     display: inline-block;
     width: 100%;
     font-size: 15px;
@@ -137,67 +180,159 @@
     }
   }
 }
-
+*/
 /*VENUS*/
-
 .nav-link__venus {
-  @include header;
+  /*@include header;*/
   &:hover {
     color: $white !important;
-    border-top: 3px solid $bg-venus;
+    border-top: 3px solid $bg-earth;
+  }
+  @media (max-width: 568px) {
+    &::before {
+      background: $bg-venus;
+    }
+    &:hover {
+      border-top: 0;
+    }
+  }
+}
+/*
+.nav-link__venus {
+  @include header;
+  display: inline-block;
+  height: 100%;
+  padding: 14px;
+
+  &:hover {
+    border-top: 1px solid $bg-venus;
+  }
+  @media (max-width: 568px) {
+    @include header;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      top: 0;
+      left: -35px;
+      height: 20px;
+      border-radius: 50%;
+      background: $bg-venus;
+    }
+    &:hover {
+      color: $white !important;
+      border-top: 0;
+    }
   }
 }
 
 /*EARTH*/
+
 .nav-link__earth {
-  @include header;
+  /*@include header;*/
   &:hover {
     color: $white !important;
     border-top: 3px solid $bg-earth;
+  }
+  @media (max-width: 568px) {
+    &::before {
+      background: $bg-earth;
+    }
+    &:hover {
+      border-top: 0;
+    }
   }
 }
 
 /*MARS*/
 .nav-link__mars {
-  @include header;
+  /*@include header;*/
   &:hover {
     color: $white !important;
     border-top: 3px solid $bg-mars;
+  }
+  @media (max-width: 568px) {
+    &::before {
+      background: $bg-mars;
+    }
+    &:hover {
+      border-top: 0;
+    }
   }
 }
 
 /*Jupiter*/
 .nav-link__jupiter {
-  @include header;
+  /*@include header;*/
   &:hover {
     color: $white !important;
     border-top: 3px solid $bg-jupiter;
+  }
+  @media (max-width: 568px) {
+    &::before {
+      background: $bg-jupiter;
+    }
+    &:hover {
+      border-top: 0;
+    }
   }
 }
 
 /*Saturn*/
 .nav-link__saturn {
-  @include header;
+  /*@include header;*/
   &:hover {
     color: $white !important;
     border-top: 3px solid $bg-saturn;
+  }
+  @media (max-width: 568px) {
+    &::before {
+      background: $bg-saturn;
+    }
+    &:hover {
+      border-top: 0;
+    }
   }
 }
 
 /*Uranus*/
 .nav-link__uranus {
-  @include header;
+  /*@include header;*/
   &:hover {
     color: $white !important;
     border-top: 3px solid $bg-uranus;
+  }
+  @media (max-width: 568px) {
+    &::before {
+      background: $bg-uranus;
+    }
+    &:hover {
+      border-top: 0;
+    }
   }
 }
 
 /*Neptune*/
 .nav-link__neptune {
-  @include header;
+  /*@include header;*/
   &:hover {
     color: $white !important;
     border-top: 3px solid $bg-neptune;
+  }
+  @media (max-width: 568px) {
+    &::before {
+      background: $bg-neptune;
+    }
+    &:hover {
+      border-top: 0;
+    }
   }
 }

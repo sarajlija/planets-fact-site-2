@@ -14,24 +14,16 @@ body {
   background-image: url("/public/assets/background-stars.svg");
 }
 
-/*
-.nav {
-  flex-direction: column;
-}
-
-.nav-link,
-.nav-link.active,
-.nav-pills,
-.nav-pills.active {
-  width: 100%;
-  display: block;
-  background-color: transparent;
-}
-.nav__mercury {
-  width: 100%;
-  flex-direction: column;
-}
-*/
+/*@mixin header {
+  font-size: 11px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  opacity: 0.75;
+  letter-spacing: 1px;
+  padding: 14px;
+  transition: all 0.3s ease-in;
+}*/
 .navbar {
   background-color: #070724;
   padding: 0;
@@ -49,7 +41,6 @@ body {
 
 .navbar-toggler-icon {
   background-image: url("/public/assets/icon-hamburger.svg");
-  color: #ffffff;
 }
 
 .container__header {
@@ -92,7 +83,6 @@ body {
     position: absolute;
     background-color: #070724;
     z-index: 1;
-    transform: translateX(-100);
     transition: all 0.3s ease-in;
   }
 }
@@ -127,33 +117,120 @@ body {
   }
 }
 
+.nav-link {
+  display: block;
+  color: #ffffff !important;
+  opacity: 0.75;
+  padding: 12px;
+}
+.nav-link:hover {
+  color: #ffffff !important;
+}
+.nav-link.active {
+  opacity: 1 !important;
+}
+@media (max-width: 568px) {
+  .nav-link {
+    position: relative;
+    margin-left: 30px;
+    padding: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .nav-link::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    top: 30px;
+    left: -35px;
+    height: 20px;
+    border-radius: 50%;
+  }
+}
+
 /*MERCURY*/
 .nav-link__mercury {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in;
+  /*@include header;*/
+}
+.nav-link__mercury:hover {
+  color: #ffffff !important;
+  border-top: 3px solid #6d2ed5;
+}
+@media (max-width: 568px) {
+  .nav-link__mercury::before {
+    background: #419ebb;
+  }
+  .nav-link__mercury:hover {
+    border-top: 0;
+  }
+}
+
+/*
+.nav-link__mercury {
   display: inline-block;
   height: 100%;
   padding: 14px;
+
+  &:hover {
+    border-top: 1px solid $bg-mercury;
+    color: $white !important;
+  }
+  @media (max-width: 568px) {
+    @include header;
+
+    display: inline-block;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      top: 0;
+      left: -35px;
+      height: 20px;
+      border-radius: 50%;
+      background: $bg-mercury;
+    }
+    &:hover {
+      color: $white !important;
+      border-top: 0;
+    }
+  }
 }
-.nav-link__mercury:hover {
-  border-top: 1px solid #419ebb;
+*/
+/*VENUS*/
+.nav-link__venus {
+  /*@include header;*/
+}
+.nav-link__venus:hover {
+  color: #ffffff !important;
+  border-top: 3px solid #6d2ed5;
 }
 @media (max-width: 568px) {
-  .nav-link__mercury {
-    font-size: 11px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #ffffff;
-    opacity: 0.75;
-    letter-spacing: 1px;
-    padding: 14px;
-    transition: all 0.3s ease-in;
+  .nav-link__venus::before {
+    background: #eda249;
+  }
+  .nav-link__venus:hover {
+    border-top: 0;
+  }
+}
+
+/*
+.nav-link__venus {
+  @include header;
+  display: inline-block;
+  height: 100%;
+  padding: 14px;
+
+  &:hover {
+    border-top: 1px solid $bg-venus;
+  }
+  @media (max-width: 568px) {
+    @include header;
     position: relative;
     display: inline-block;
     width: 100%;
@@ -161,133 +238,124 @@ body {
     font-weight: 700;
     color: #ffffff;
     opacity: 1;
-  }
-  .nav-link__mercury::before {
-    position: absolute;
-    content: "";
-    width: 20px;
-    top: 0;
-    left: -35px;
-    height: 20px;
-    border-radius: 50%;
-    background: #419ebb;
-  }
-  .nav-link__mercury:hover {
-    color: #ffffff !important;
-    border-top: 0;
-  }
-}
 
-/*VENUS*/
-.nav-link__venus {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in;
-}
-.nav-link__venus:hover {
-  color: #ffffff !important;
-  border-top: 3px solid #eda249;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      top: 0;
+      left: -35px;
+      height: 20px;
+      border-radius: 50%;
+      background: $bg-venus;
+    }
+    &:hover {
+      color: $white !important;
+      border-top: 0;
+    }
+  }
 }
 
 /*EARTH*/
 .nav-link__earth {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in;
+  /*@include header;*/
 }
 .nav-link__earth:hover {
   color: #ffffff !important;
   border-top: 3px solid #6d2ed5;
 }
+@media (max-width: 568px) {
+  .nav-link__earth::before {
+    background: #6d2ed5;
+  }
+  .nav-link__earth:hover {
+    border-top: 0;
+  }
+}
 
 /*MARS*/
 .nav-link__mars {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in;
+  /*@include header;*/
 }
 .nav-link__mars:hover {
   color: #ffffff !important;
   border-top: 3px solid #d14c32;
 }
+@media (max-width: 568px) {
+  .nav-link__mars::before {
+    background: #d14c32;
+  }
+  .nav-link__mars:hover {
+    border-top: 0;
+  }
+}
 
 /*Jupiter*/
 .nav-link__jupiter {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in;
+  /*@include header;*/
 }
 .nav-link__jupiter:hover {
   color: #ffffff !important;
   border-top: 3px solid #d83a34;
 }
+@media (max-width: 568px) {
+  .nav-link__jupiter::before {
+    background: #d83a34;
+  }
+  .nav-link__jupiter:hover {
+    border-top: 0;
+  }
+}
 
 /*Saturn*/
 .nav-link__saturn {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in;
+  /*@include header;*/
 }
 .nav-link__saturn:hover {
   color: #ffffff !important;
   border-top: 3px solid #cd5120;
 }
+@media (max-width: 568px) {
+  .nav-link__saturn::before {
+    background: #cd5120;
+  }
+  .nav-link__saturn:hover {
+    border-top: 0;
+  }
+}
 
 /*Uranus*/
 .nav-link__uranus {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in;
+  /*@include header;*/
 }
 .nav-link__uranus:hover {
   color: #ffffff !important;
   border-top: 3px solid #1ec1a2;
 }
+@media (max-width: 568px) {
+  .nav-link__uranus::before {
+    background: #1ec1a2;
+  }
+  .nav-link__uranus:hover {
+    border-top: 0;
+  }
+}
 
 /*Neptune*/
 .nav-link__neptune {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in;
+  /*@include header;*/
 }
 .nav-link__neptune:hover {
   color: #ffffff !important;
   border-top: 3px solid #2d68f0;
+}
+@media (max-width: 568px) {
+  .nav-link__neptune::before {
+    background: #2d68f0;
+  }
+  .nav-link__neptune:hover {
+    border-top: 0;
+  }
 }
 
 .container__card {

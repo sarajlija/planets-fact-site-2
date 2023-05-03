@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { Col, Container, Row, Image, Button } from "react-bootstrap"
 import Card from "react-bootstrap/Card"
 import data from "../../data.json"
-import "./Saturn.css"
 
 function Saturn() {
   const [value, setValue] = useState(0)

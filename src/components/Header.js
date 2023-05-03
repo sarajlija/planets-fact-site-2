@@ -31,7 +31,7 @@ function Header({ windowWith }) {
             {data.map((item, index) => (
               <LinkContainer key={item.name} to={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} onClick={() => handleClick(index)}>
                 <Nav.Item>
-                  <Nav.Link href={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} bsPrefix={`nav-link__${item.name.toLowerCase()}`} className={` ${index === valueHeader && "active"}`}>
+                  <Nav.Link href={`/${item.name !== "Mercury" ? item.name.toLowerCase() : ""}`} bsPrefix={`nav-link nav-link__${item.name.toLowerCase()}`}>
                     {item.name}
                   </Nav.Link>
                 </Nav.Item>
