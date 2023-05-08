@@ -30,7 +30,7 @@ function Neptune() {
               </Card.Text>
             </Card.Body>
 
-            <div className="d-grid gap-2 w-100">
+            <div className="btn__container">
               <Button variant="outline-light" className={` ${0 === value && "active"}`} bsPrefix="btn__overview__neptune" onClick={() => setValue(0)}>
                 <span className="me-2">01</span>overveiw
               </Button>

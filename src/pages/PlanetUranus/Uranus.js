@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { Col, Container, Row, Image, Button } from "react-bootstrap"
 import Card from "react-bootstrap/Card"
 import data from "../../data.json"
-import "./Uranus.css"
 
 function Uranus() {
   const [value, setValue] = useState(0)
@@ -29,7 +28,7 @@ function Uranus() {
               </Card.Text>
             </Card.Body>
 
-            <div className="d-grid gap-2 w-100">
+            <div className="btn__container">
               <Button variant="outline-light" className={`text-uppercase ${0 === value && "active"}`} bsPrefix="btn__overview__uranus" onClick={() => setValue(0)}>
                 <span className="me-2">01</span>overveiw
               </Button>

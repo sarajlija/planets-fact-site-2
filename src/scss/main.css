@@ -14,16 +14,7 @@ body {
   background-image: url("/public/assets/background-stars.svg");
 }
 
-/*@mixin header {
-  font-size: 11px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $white;
-  opacity: 0.75;
-  letter-spacing: 1px;
-  padding: 14px;
-  transition: all 0.3s ease-in;
-}*/
+/*HEADER*/
 .navbar {
   background-color: #070724;
   padding: 0;
@@ -49,7 +40,7 @@ body {
 }
 @media (max-width: 568px) {
   .container__header {
-    margin: 0 24px;
+    margin: 0 14px;
     width: 100%;
     justify-content: space-between;
     flex-direction: column;
@@ -165,43 +156,6 @@ body {
   }
 }
 
-/*
-.nav-link__mercury {
-  display: inline-block;
-  height: 100%;
-  padding: 14px;
-
-  &:hover {
-    border-top: 1px solid $bg-mercury;
-    color: $white !important;
-  }
-  @media (max-width: 568px) {
-    @include header;
-
-    display: inline-block;
-    width: 100%;
-    font-size: 15px;
-    font-weight: 700;
-    color: #ffffff;
-    opacity: 1;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 20px;
-      top: 0;
-      left: -35px;
-      height: 20px;
-      border-radius: 50%;
-      background: $bg-mercury;
-    }
-    &:hover {
-      color: $white !important;
-      border-top: 0;
-    }
-  }
-}
-*/
 /*VENUS*/
 .nav-link__venus {
   /*@include header;*/
@@ -216,43 +170,6 @@ body {
   }
   .nav-link__venus:hover {
     border-top: 0;
-  }
-}
-
-/*
-.nav-link__venus {
-  @include header;
-  display: inline-block;
-  height: 100%;
-  padding: 14px;
-
-  &:hover {
-    border-top: 1px solid $bg-venus;
-  }
-  @media (max-width: 568px) {
-    @include header;
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    font-size: 15px;
-    font-weight: 700;
-    color: #ffffff;
-    opacity: 1;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 20px;
-      top: 0;
-      left: -35px;
-      height: 20px;
-      border-radius: 50%;
-      background: $bg-venus;
-    }
-    &:hover {
-      color: $white !important;
-      border-top: 0;
-    }
   }
 }
 
@@ -358,6 +275,7 @@ body {
   }
 }
 
+/*CARDS*/
 .container__card {
   width: 75%;
   margin: auto;
@@ -370,14 +288,8 @@ body {
 @media (max-width: 568px) {
   .container__card {
     margin-top: 4rem;
-    width: 90%;
+    width: 95%;
   }
-}
-
-.btn__container {
-  width: 100%;
-  display: grid;
-  gap: 1rem;
 }
 
 /*CARD_BODY*/
@@ -388,6 +300,13 @@ body {
   justify-content: space-around;
   background-color: #070724;
   margin-top: 80px;
+}
+@media (max-width: 756px) {
+  .card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 @media (max-width: 568px) {
   .card {
@@ -401,12 +320,40 @@ body {
   justify-content: center;
   padding: 0;
 }
+@media (max-width: 756px) {
+  .card-body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    column-gap: 1rem;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+@media (max-width: 568px) {
+  .card-body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .card-title {
   font-family: "Antonio", sans-serif;
   font-size: 80px;
   text-transform: uppercase;
   margin-bottom: 23px;
+  margin-top: 126px;
+}
+@media (max-width: 756px) {
+  .card-title {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 568px) {
+  .card-title {
+    margin-top: 0;
+  }
 }
 
 .card-text {
@@ -414,6 +361,31 @@ body {
   font-family: "League Spartan", sans-serif;
   font-size: 14px;
   line-height: 25px;
+}
+@media (max-width: 568px) {
+  .card-text {
+    margin-top: 32px;
+    padding: 0 15px;
+  }
+}
+
+/*BUTTONS*/
+.btn__container {
+  margin-top: 39px;
+  margin-bottom: 87px;
+  width: 90%;
+  display: grid;
+  gap: 1rem;
+}
+@media (max-width: 568px) {
+  .btn__container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    column-gap: 0.5rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  }
 }
 
 /*MERCURY*/
@@ -434,6 +406,24 @@ body {
 .btn__overview__mercury:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__overview__mercury {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    font-size: 9px;
+    letter-spacing: 2px;
+    padding: 20px 24px;
+  }
+  .btn__overview__mercury.active {
+    border-bottom: 3px solid #419ebb;
+    background-color: transparent;
+  }
+  .btn__overview__mercury span {
+    display: none;
+  }
+}
 
 .btn__internal__mercury {
   display: flex;
@@ -451,6 +441,27 @@ body {
 }
 .btn__internal__mercury:hover {
   background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__internal__mercury {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__mercury.active {
+    border-bottom: 2px solid #419ebb;
+    background-color: transparent;
+  }
+  .btn__internal__mercury:hover {
+    background-color: transparent;
+  }
+  .btn__internal__mercury span {
+    display: none;
+  }
 }
 
 .btn__surface__mercury {
@@ -470,9 +481,28 @@ body {
 .btn__surface__mercury:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__surface__mercury {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__mercury.active {
+    border-bottom: 3px solid #419ebb;
+    background-color: transparent;
+  }
+  .btn__surface__mercury span {
+    display: none;
+  }
+}
 
 /*VENUS*/
 .btn__overview__venus {
+  background-color: #eda249;
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
@@ -488,6 +518,24 @@ body {
 }
 .btn__overview__venus:hover {
   background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__venus {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__venus.active {
+    border-bottom: 3px solid #eda249;
+    background-color: transparent;
+  }
+  .btn__overview__venus span {
+    display: none;
+  }
 }
 
 .btn__internal__venus {
@@ -507,6 +555,24 @@ body {
 .btn__internal__venus:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__internal__venus {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__venus.active {
+    border-bottom: 3px solid #eda249;
+    background-color: transparent;
+  }
+  .btn__internal__venus span {
+    display: none;
+  }
+}
 
 .btn__surface__venus {
   display: flex;
@@ -525,9 +591,28 @@ body {
 .btn__surface__venus:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__surface__venus {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__venus.active {
+    border-bottom: 3px solid #eda249;
+    background-color: transparent;
+  }
+  .btn__surface__venus span {
+    display: none;
+  }
+}
 
 /*EARTH*/
 .btn__overview__earth {
+  background-color: #6d2ed5;
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
@@ -543,6 +628,24 @@ body {
 }
 .btn__overview__earth:hover {
   background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__earth {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__earth.active {
+    border-bottom: 3px solid #6d2ed5;
+    background-color: transparent;
+  }
+  .btn__overview__earth span {
+    display: none;
+  }
 }
 
 .btn__internal__earth {
@@ -562,6 +665,24 @@ body {
 .btn__internal__earth:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__internal__earth {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__earth.active {
+    border-bottom: 3px solid #6d2ed5;
+    background-color: transparent;
+  }
+  .btn__internal__earth span {
+    display: none;
+  }
+}
 
 .btn__surface__earth {
   display: flex;
@@ -580,9 +701,28 @@ body {
 .btn__surface__earth:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__surface__earth {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__earth.active {
+    border-bottom: 3px solid #6d2ed5;
+    background-color: transparent;
+  }
+  .btn__surface__earth span {
+    display: none;
+  }
+}
 
 /*MARS*/
 .btn__overview__mars {
+  background-color: #d14c32;
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
@@ -598,6 +738,24 @@ body {
 }
 .btn__overview__mars:hover {
   background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__mars {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__mars.active {
+    border-bottom: 3px solid #d14c32;
+    background-color: transparent;
+  }
+  .btn__overview__mars span {
+    display: none;
+  }
 }
 
 .btn__internal__mars {
@@ -617,6 +775,24 @@ body {
 .btn__internal__mars:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__internal__mars {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__mars.active {
+    border-bottom: 3px solid #d14c32;
+    background-color: transparent;
+  }
+  .btn__internal__mars span {
+    display: none;
+  }
+}
 
 .btn__surface__mars {
   display: flex;
@@ -630,14 +806,33 @@ body {
   transition: all 0.3s ease-in;
 }
 .btn__surface__mars.active {
-  background-color: #d14c32;
+  background-color: #6d2ed5;
 }
 .btn__surface__mars:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__surface__mars {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__mars.active {
+    border-bottom: 3px solid #d14c32;
+    background-color: transparent;
+  }
+  .btn__surface__mars span {
+    display: none;
+  }
+}
 
 /*JUPITER*/
 .btn__overview__jupiter {
+  background-color: #d83a34;
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
@@ -653,6 +848,24 @@ body {
 }
 .btn__overview__jupiter:hover {
   background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__jupiter {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__jupiter.active {
+    border-bottom: 3px solid #d83a34;
+    background-color: transparent;
+  }
+  .btn__overview__jupiter span {
+    display: none;
+  }
 }
 
 .btn__internal__jupiter {
@@ -672,6 +885,24 @@ body {
 .btn__internal__jupiter:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__internal__jupiter {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__jupiter.active {
+    border-bottom: 3px solid #d83a34;
+    background-color: transparent;
+  }
+  .btn__internal__jupiter span {
+    display: none;
+  }
+}
 
 .btn__surface__jupiter {
   display: flex;
@@ -690,9 +921,28 @@ body {
 .btn__surface__jupiter:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__surface__jupiter {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__jupiter.active {
+    border-bottom: 3px solid #d83a34;
+    background-color: transparent;
+  }
+  .btn__surface__jupiter span {
+    display: none;
+  }
+}
 
 /*SATURN*/
 .btn__overview__saturn {
+  background-color: #cd5120;
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
@@ -708,6 +958,24 @@ body {
 }
 .btn__overview__saturn:hover {
   background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__saturn {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__saturn.active {
+    border-bottom: 3px solid #cd5120;
+    background-color: transparent;
+  }
+  .btn__overview__saturn span {
+    display: none;
+  }
 }
 
 .btn__internal__saturn {
@@ -727,6 +995,24 @@ body {
 .btn__internal__saturn:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__internal__saturn {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__saturn.active {
+    border-bottom: 3px solid #cd5120;
+    background-color: transparent;
+  }
+  .btn__internal__saturn span {
+    display: none;
+  }
+}
 
 .btn__surface__saturn {
   display: flex;
@@ -745,9 +1031,28 @@ body {
 .btn__surface__saturn:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__surface__saturn {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__saturn.active {
+    border-bottom: 3px solid #cd5120;
+    background-color: transparent;
+  }
+  .btn__surface__saturn span {
+    display: none;
+  }
+}
 
 /*URANUS*/
 .btn__overview__uranus {
+  background-color: #1ec1a2;
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
@@ -763,6 +1068,24 @@ body {
 }
 .btn__overview__uranus:hover {
   background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__uranus {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__uranus.active {
+    border-bottom: 3px solid #1ec1a2;
+    background-color: transparent;
+  }
+  .btn__overview__uranus span {
+    display: none;
+  }
 }
 
 .btn__internal__uranus {
@@ -782,6 +1105,24 @@ body {
 .btn__internal__uranus:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__internal__uranus {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__uranus.active {
+    border-bottom: 3px solid #1ec1a2;
+    background-color: transparent;
+  }
+  .btn__internal__uranus span {
+    display: none;
+  }
+}
 
 .btn__surface__uranus {
   display: flex;
@@ -800,9 +1141,28 @@ body {
 .btn__surface__uranus:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__surface__uranus {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__uranus.active {
+    border-bottom: 3px solid #1ec1a2;
+    background-color: transparent;
+  }
+  .btn__surface__uranus span {
+    display: none;
+  }
+}
 
 /*NEPTUNE*/
 .btn__overview__neptune {
+  background-color: #2d68f0;
   display: flex;
   padding: 12px 28px;
   color: #ffffff;
@@ -818,6 +1178,24 @@ body {
 }
 .btn__overview__neptune:hover {
   background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__neptune {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__neptune.active {
+    border-bottom: 3px solid #2d68f0;
+    background-color: transparent;
+  }
+  .btn__overview__neptune span {
+    display: none;
+  }
 }
 
 .btn__internal__neptune {
@@ -837,6 +1215,24 @@ body {
 .btn__internal__neptune:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__internal__neptune {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__neptune.active {
+    border-bottom: 3px solid #2d68f0;
+    background-color: transparent;
+  }
+  .btn__internal__neptune span {
+    display: none;
+  }
+}
 
 .btn__surface__neptune {
   display: flex;
@@ -855,33 +1251,63 @@ body {
 .btn__surface__neptune:hover {
   background-color: #38384f;
 }
+@media (max-width: 568px) {
+  .btn__surface__neptune {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__neptune.active {
+    border-bottom: 3px solid #2d68f0;
+    background-color: transparent;
+  }
+  .btn__surface__neptune span {
+    display: none;
+  }
+}
 
+/*FOOTER*/
 .card__footer {
   font-family: "Antonio", sans-serif;
   border: 1px solid #ffffff;
   width: 100%;
   height: 100%;
-}
-
-.card__footer .card-body {
-  padding: 4px 0 27px 23px;
-}
-
-.card__footer .card-title {
-  font-family: "League Spartan", sans-serif;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 25px;
-  color: #ffffff;
-  letter-spacing: 1px;
-  mix-blend-mode: normal;
-  opacity: 0.5;
-}
-
-.card__footer .card-footer {
   font-weight: 400;
   font-size: 40px;
   line-height: 52px;
   color: #ffffff;
   opacity: 1;
-} /*# sourceMappingURL=main.css.map */
+}
+.card__footer .card-body {
+  width: auto;
+  padding: 4px 0 27px 23px;
+}
+.card__footer .card-title {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 25px;
+  margin-top: 20px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+@media (max-width: 568px) {
+  .card__footer .card-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 9px 48px;
+  }
+  .card__footer .card-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}/*# sourceMappingURL=main.css.map */

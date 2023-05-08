@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { Col, Container, Row, Image, Button } from "react-bootstrap"
 import Card from "react-bootstrap/Card"
 import data from "../../data.json"
-import "./Venus.css"
 
 function Venus() {
   const [value, setValue] = useState(0)
@@ -10,7 +9,7 @@ function Venus() {
   const { name, overview, structure, geology, rotation, revolution, radius, temperature, images } = data[1]
 
   return (
-    <Container>
+    <Container bsPrefix="container__card">
       <Row>
         <Col md={6} className="d-flex justify-content-center align-items-center">
           <Image fluid src={value === 0 ? images.planet : value === 1 ? images.internal : images.geology} />
@@ -29,7 +28,7 @@ function Venus() {
               </Card.Text>
             </Card.Body>
 
-            <div className="d-grid gap-2 w-100">
+            <div className="btn__container">
               <Button variant="outline-light" className={`text-uppercase ${0 === value && "active"}`} bsPrefix="btn__overview__venus" onClick={() => setValue(0)}>
                 <span className="me-2">01</span>overveiw
               </Button>

@@ -44,7 +44,7 @@ function Mercury() {
           </Card>
         </Col>
       </Row>
-      <Row xs={1} md={4} className="g-4 ">
+      <Row xs={1} md={4} className="g-4 mb-5">
         <Col>
           <Card bsPrefix="card__footer">
             <Card.Body>
