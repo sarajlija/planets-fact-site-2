@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Col, Container, Row, Image, Button } from "react-bootstrap"
 import Card from "react-bootstrap/Card"
-import Nav from "react-bootstrap/Nav"
+
 import data from "../../data.json"
 //import "./Mercury.css"
 
@@ -14,7 +14,7 @@ function Mercury() {
     <Container bsPrefix="container__card">
       <Row>
         <Col md={6} className="d-flex justify-content-center align-items-center">
-          <Image fluid src={value === 0 ? images.planet : value === 1 ? images.internal : images.geology} />
+          <Image fluid src={value === 0 ? images.planet : value === 1 ? images.internal : images.geology} bsPrefix="img" />
         </Col>
         <Col md={6} className="">
           <Card>

@@ -256,6 +256,12 @@
     }
   }
 }
+/*IMAGES*/
+.img {
+  @media (max-width: 568px) {
+    margin-top: 4rem;
+  }
+}
 
 /*CARDS*/
 @mixin flex-card {
@@ -265,7 +271,7 @@
 }
 
 .container__card {
-  width: 75%;
+  width: 90%;
   margin: auto;
   @media (max-width: 768px) {
     margin-top: 4rem;
@@ -273,14 +279,14 @@
 
   @media (max-width: 568px) {
     margin-top: 4rem;
-    width: 95%;
+    width: 98%;
   }
 }
 
 /*CARD_BODY*/
 
 .card {
-  height: 70%;
+  height: 80%;
   @include flex-card;
   background-color: $bg-navbar;
   margin-top: 80px;
@@ -290,6 +296,7 @@
     align-items: center;
   }
   @media (max-width: 568px) {
+    height: 80%;
     flex-direction: column-reverse;
   }
 }

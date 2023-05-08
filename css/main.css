@@ -1,0 +1,1323 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Raleway:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=League+Spartan:wght@400;700&family=Raleway:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #070724;
+  background-image: url("/public/assets/background-stars.svg");
+}
+
+/*HEADER*/
+.navbar {
+  background-color: #070724;
+  padding: 0;
+}
+
+.navbar-brand {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: -1.05px;
+}
+
+.navbar-toggler {
+  color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("/public/assets/icon-hamburger.svg");
+}
+
+.container__header {
+  width: 75%;
+  margin: auto;
+}
+@media (max-width: 568px) {
+  .container__header {
+    margin: 0 14px;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 568px) {
+  .wrapper {
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 568px) {
+  .navbar-collapse {
+    height: 100vh !important;
+    width: 100%;
+    display: flex;
+    top: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    background-color: #070724;
+    z-index: 1;
+    transition: all 0.3s ease-in;
+  }
+}
+
+@media (max-width: 568px) {
+  .navbar-nav {
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 100%;
+    top: 2rem;
+  }
+}
+
+.nav-item {
+  width: 100%;
+  cursor: pointer;
+}
+.nav-item:hover {
+  color: #ffffff !important;
+  opacity: 1;
+}
+@media (max-width: 568px) {
+  .nav-item {
+    width: 85%;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  .nav-item:not(:last-child) {
+    border-bottom: 1px solid #ffffff;
+    opacity: 1;
+  }
+}
+
+.nav-link {
+  display: block;
+  color: #ffffff !important;
+  opacity: 0.75;
+  padding: 12px;
+}
+.nav-link:hover {
+  color: #ffffff !important;
+}
+.nav-link.active {
+  opacity: 1 !important;
+}
+@media (max-width: 568px) {
+  .nav-link {
+    position: relative;
+    margin-left: 30px;
+    padding: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .nav-link::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    top: 30px;
+    left: -35px;
+    height: 20px;
+    border-radius: 50%;
+  }
+}
+
+/*MERCURY*/
+.nav-link__mercury {
+  /*@include header;*/
+}
+.nav-link__mercury:hover {
+  color: #ffffff !important;
+  border-top: 3px solid #6d2ed5;
+}
+@media (max-width: 568px) {
+  .nav-link__mercury::before {
+    background: #419ebb;
+  }
+  .nav-link__mercury:hover {
+    border-top: 0;
+  }
+}
+
+/*VENUS*/
+.nav-link__venus {
+  /*@include header;*/
+}
+.nav-link__venus:hover {
+  color: #ffffff !important;
+  border-top: 3px solid #6d2ed5;
+}
+@media (max-width: 568px) {
+  .nav-link__venus::before {
+    background: #eda249;
+  }
+  .nav-link__venus:hover {
+    border-top: 0;
+  }
+}
+
+/*EARTH*/
+.nav-link__earth {
+  /*@include header;*/
+}
+.nav-link__earth:hover {
+  color: #ffffff !important;
+  border-top: 3px solid #6d2ed5;
+}
+@media (max-width: 568px) {
+  .nav-link__earth::before {
+    background: #6d2ed5;
+  }
+  .nav-link__earth:hover {
+    border-top: 0;
+  }
+}
+
+/*MARS*/
+.nav-link__mars {
+  /*@include header;*/
+}
+.nav-link__mars:hover {
+  color: #ffffff !important;
+  border-top: 3px solid #d14c32;
+}
+@media (max-width: 568px) {
+  .nav-link__mars::before {
+    background: #d14c32;
+  }
+  .nav-link__mars:hover {
+    border-top: 0;
+  }
+}
+
+/*Jupiter*/
+.nav-link__jupiter {
+  /*@include header;*/
+}
+.nav-link__jupiter:hover {
+  color: #ffffff !important;
+  border-top: 3px solid #d83a34;
+}
+@media (max-width: 568px) {
+  .nav-link__jupiter::before {
+    background: #d83a34;
+  }
+  .nav-link__jupiter:hover {
+    border-top: 0;
+  }
+}
+
+/*Saturn*/
+.nav-link__saturn {
+  /*@include header;*/
+}
+.nav-link__saturn:hover {
+  color: #ffffff !important;
+  border-top: 3px solid #cd5120;
+}
+@media (max-width: 568px) {
+  .nav-link__saturn::before {
+    background: #cd5120;
+  }
+  .nav-link__saturn:hover {
+    border-top: 0;
+  }
+}
+
+/*Uranus*/
+.nav-link__uranus {
+  /*@include header;*/
+}
+.nav-link__uranus:hover {
+  color: #ffffff !important;
+  border-top: 3px solid #1ec1a2;
+}
+@media (max-width: 568px) {
+  .nav-link__uranus::before {
+    background: #1ec1a2;
+  }
+  .nav-link__uranus:hover {
+    border-top: 0;
+  }
+}
+
+/*Neptune*/
+.nav-link__neptune {
+  /*@include header;*/
+}
+.nav-link__neptune:hover {
+  color: #ffffff !important;
+  border-top: 3px solid #2d68f0;
+}
+@media (max-width: 568px) {
+  .nav-link__neptune::before {
+    background: #2d68f0;
+  }
+  .nav-link__neptune:hover {
+    border-top: 0;
+  }
+}
+
+/*IMAGES*/
+@media (max-width: 568px) {
+  .img {
+    margin-top: 4rem;
+  }
+}
+
+/*CARDS*/
+.container__card {
+  width: 90%;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .container__card {
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 568px) {
+  .container__card {
+    margin-top: 4rem;
+    width: 98%;
+  }
+}
+
+/*CARD_BODY*/
+.card {
+  height: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: #070724;
+  margin-top: 80px;
+}
+@media (max-width: 756px) {
+  .card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (max-width: 568px) {
+  .card {
+    height: 80%;
+    flex-direction: column-reverse;
+  }
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+@media (max-width: 756px) {
+  .card-body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+@media (max-width: 568px) {
+  .card-body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card-title {
+  font-family: "Antonio", sans-serif;
+  font-size: 80px;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+  margin-top: 126px;
+}
+@media (max-width: 756px) {
+  .card-title {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 568px) {
+  .card-title {
+    margin-top: 0;
+  }
+}
+
+.card-text {
+  width: auto;
+  font-family: "League Spartan", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+}
+@media (max-width: 568px) {
+  .card-text {
+    margin-top: 32px;
+    padding: 0 15px;
+  }
+}
+
+/*BUTTONS*/
+.btn__container {
+  margin-top: 39px;
+  margin-bottom: 87px;
+  width: 90%;
+  display: grid;
+  gap: 1rem;
+}
+@media (max-width: 568px) {
+  .btn__container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+/*MERCURY*/
+.btn__overview__mercury {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__overview__mercury.active {
+  background-color: #419ebb;
+}
+.btn__overview__mercury:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__mercury {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    font-size: 9px;
+    letter-spacing: 2px;
+    padding: 20px 24px;
+  }
+  .btn__overview__mercury.active {
+    border-bottom: 3px solid #419ebb;
+    background-color: transparent;
+  }
+  .btn__overview__mercury span {
+    display: none;
+  }
+}
+
+.btn__internal__mercury {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__internal__mercury.active {
+  background-color: #419ebb;
+}
+.btn__internal__mercury:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__internal__mercury {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__mercury.active {
+    border-bottom: 2px solid #419ebb;
+    background-color: transparent;
+  }
+  .btn__internal__mercury:hover {
+    background-color: transparent;
+  }
+  .btn__internal__mercury span {
+    display: none;
+  }
+}
+
+.btn__surface__mercury {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__surface__mercury.active {
+  background-color: #419ebb;
+}
+.btn__surface__mercury:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__surface__mercury {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__mercury.active {
+    border-bottom: 3px solid #419ebb;
+    background-color: transparent;
+  }
+  .btn__surface__mercury span {
+    display: none;
+  }
+}
+
+/*VENUS*/
+.btn__overview__venus {
+  background-color: #eda249;
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__overview__venus.active {
+  background-color: #eda249;
+}
+.btn__overview__venus:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__venus {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__venus.active {
+    border-bottom: 3px solid #eda249;
+    background-color: transparent;
+  }
+  .btn__overview__venus span {
+    display: none;
+  }
+}
+
+.btn__internal__venus {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__internal__venus.active {
+  background-color: #eda249;
+}
+.btn__internal__venus:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__internal__venus {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__venus.active {
+    border-bottom: 3px solid #eda249;
+    background-color: transparent;
+  }
+  .btn__internal__venus span {
+    display: none;
+  }
+}
+
+.btn__surface__venus {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__surface__venus.active {
+  background-color: #eda249;
+}
+.btn__surface__venus:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__surface__venus {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__venus.active {
+    border-bottom: 3px solid #eda249;
+    background-color: transparent;
+  }
+  .btn__surface__venus span {
+    display: none;
+  }
+}
+
+/*EARTH*/
+.btn__overview__earth {
+  background-color: #6d2ed5;
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__overview__earth.active {
+  background-color: #6d2ed5;
+}
+.btn__overview__earth:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__earth {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__earth.active {
+    border-bottom: 3px solid #6d2ed5;
+    background-color: transparent;
+  }
+  .btn__overview__earth span {
+    display: none;
+  }
+}
+
+.btn__internal__earth {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__internal__earth.active {
+  background-color: #6d2ed5;
+}
+.btn__internal__earth:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__internal__earth {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__earth.active {
+    border-bottom: 3px solid #6d2ed5;
+    background-color: transparent;
+  }
+  .btn__internal__earth span {
+    display: none;
+  }
+}
+
+.btn__surface__earth {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__surface__earth.active {
+  background-color: #6d2ed5;
+}
+.btn__surface__earth:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__surface__earth {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__earth.active {
+    border-bottom: 3px solid #6d2ed5;
+    background-color: transparent;
+  }
+  .btn__surface__earth span {
+    display: none;
+  }
+}
+
+/*MARS*/
+.btn__overview__mars {
+  background-color: #d14c32;
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__overview__mars.active {
+  background-color: #d14c32;
+}
+.btn__overview__mars:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__mars {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__mars.active {
+    border-bottom: 3px solid #d14c32;
+    background-color: transparent;
+  }
+  .btn__overview__mars span {
+    display: none;
+  }
+}
+
+.btn__internal__mars {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__internal__mars.active {
+  background-color: #d14c32;
+}
+.btn__internal__mars:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__internal__mars {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__mars.active {
+    border-bottom: 3px solid #d14c32;
+    background-color: transparent;
+  }
+  .btn__internal__mars span {
+    display: none;
+  }
+}
+
+.btn__surface__mars {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__surface__mars.active {
+  background-color: #6d2ed5;
+}
+.btn__surface__mars:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__surface__mars {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__mars.active {
+    border-bottom: 3px solid #d14c32;
+    background-color: transparent;
+  }
+  .btn__surface__mars span {
+    display: none;
+  }
+}
+
+/*JUPITER*/
+.btn__overview__jupiter {
+  background-color: #d83a34;
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__overview__jupiter.active {
+  background-color: #d83a34;
+}
+.btn__overview__jupiter:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__jupiter {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__jupiter.active {
+    border-bottom: 3px solid #d83a34;
+    background-color: transparent;
+  }
+  .btn__overview__jupiter span {
+    display: none;
+  }
+}
+
+.btn__internal__jupiter {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__internal__jupiter.active {
+  background-color: #d83a34;
+}
+.btn__internal__jupiter:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__internal__jupiter {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__jupiter.active {
+    border-bottom: 3px solid #d83a34;
+    background-color: transparent;
+  }
+  .btn__internal__jupiter span {
+    display: none;
+  }
+}
+
+.btn__surface__jupiter {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__surface__jupiter.active {
+  background-color: #d83a34;
+}
+.btn__surface__jupiter:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__surface__jupiter {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__jupiter.active {
+    border-bottom: 3px solid #d83a34;
+    background-color: transparent;
+  }
+  .btn__surface__jupiter span {
+    display: none;
+  }
+}
+
+/*SATURN*/
+.btn__overview__saturn {
+  background-color: #cd5120;
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__overview__saturn.active {
+  background-color: #cd5120;
+}
+.btn__overview__saturn:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__saturn {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__saturn.active {
+    border-bottom: 3px solid #cd5120;
+    background-color: transparent;
+  }
+  .btn__overview__saturn span {
+    display: none;
+  }
+}
+
+.btn__internal__saturn {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__internal__saturn.active {
+  background-color: #cd5120;
+}
+.btn__internal__saturn:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__internal__saturn {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__saturn.active {
+    border-bottom: 3px solid #cd5120;
+    background-color: transparent;
+  }
+  .btn__internal__saturn span {
+    display: none;
+  }
+}
+
+.btn__surface__saturn {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__surface__saturn.active {
+  background-color: #cd5120;
+}
+.btn__surface__saturn:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__surface__saturn {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__saturn.active {
+    border-bottom: 3px solid #cd5120;
+    background-color: transparent;
+  }
+  .btn__surface__saturn span {
+    display: none;
+  }
+}
+
+/*URANUS*/
+.btn__overview__uranus {
+  background-color: #1ec1a2;
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__overview__uranus.active {
+  background-color: #1ec1a2;
+}
+.btn__overview__uranus:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__uranus {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__uranus.active {
+    border-bottom: 3px solid #1ec1a2;
+    background-color: transparent;
+  }
+  .btn__overview__uranus span {
+    display: none;
+  }
+}
+
+.btn__internal__uranus {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__internal__uranus.active {
+  background-color: #1ec1a2;
+}
+.btn__internal__uranus:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__internal__uranus {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__uranus.active {
+    border-bottom: 3px solid #1ec1a2;
+    background-color: transparent;
+  }
+  .btn__internal__uranus span {
+    display: none;
+  }
+}
+
+.btn__surface__uranus {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__surface__uranus.active {
+  background-color: #1ec1a2;
+}
+.btn__surface__uranus:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__surface__uranus {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__uranus.active {
+    border-bottom: 3px solid #1ec1a2;
+    background-color: transparent;
+  }
+  .btn__surface__uranus span {
+    display: none;
+  }
+}
+
+/*NEPTUNE*/
+.btn__overview__neptune {
+  background-color: #2d68f0;
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__overview__neptune.active {
+  background-color: #2d68f0;
+}
+.btn__overview__neptune:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__overview__neptune {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__overview__neptune.active {
+    border-bottom: 3px solid #2d68f0;
+    background-color: transparent;
+  }
+  .btn__overview__neptune span {
+    display: none;
+  }
+}
+
+.btn__internal__neptune {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__internal__neptune.active {
+  background-color: #2d68f0;
+}
+.btn__internal__neptune:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__internal__neptune {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__internal__neptune.active {
+    border-bottom: 3px solid #2d68f0;
+    background-color: transparent;
+  }
+  .btn__internal__neptune span {
+    display: none;
+  }
+}
+
+.btn__surface__neptune {
+  display: flex;
+  padding: 12px 28px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.btn__surface__neptune.active {
+  background-color: #2d68f0;
+}
+.btn__surface__neptune:hover {
+  background-color: #38384f;
+}
+@media (max-width: 568px) {
+  .btn__surface__neptune {
+    display: block;
+    width: 28%;
+    background-color: transparent;
+    border: none;
+    padding: 20px 24px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .btn__surface__neptune.active {
+    border-bottom: 3px solid #2d68f0;
+    background-color: transparent;
+  }
+  .btn__surface__neptune span {
+    display: none;
+  }
+}
+
+/*FOOTER*/
+.card__footer {
+  font-family: "Antonio", sans-serif;
+  border: 1px solid #ffffff;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: #ffffff;
+  opacity: 1;
+}
+.card__footer .card-body {
+  width: auto;
+  padding: 4px 0 27px 23px;
+}
+.card__footer .card-title {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 25px;
+  margin-top: 20px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+@media (max-width: 568px) {
+  .card__footer .card-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 9px 48px;
+  }
+  .card__footer .card-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}/*# sourceMappingURL=main.css.map */
