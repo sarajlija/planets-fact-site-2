@@ -125,7 +125,7 @@
   /*@include header;*/
   &:hover {
     color: $white !important;
-    border-top: 3px solid $bg-earth;
+    border-top: 3px solid $bg-mercury;
   }
   @media (max-width: 568px) {
     &::before {
@@ -142,7 +142,7 @@
   /*@include header;*/
   &:hover {
     color: $white !important;
-    border-top: 3px solid $bg-earth;
+    border-top: 3px solid $bg-venus;
   }
   @media (max-width: 568px) {
     &::before {
