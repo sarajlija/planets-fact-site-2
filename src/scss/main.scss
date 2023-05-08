@@ -292,12 +292,14 @@
   margin-top: 80px;
   @media (max-width: 756px) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
   }
   @media (max-width: 568px) {
     height: 80%;
     flex-direction: column-reverse;
+    justify-content: center;
   }
 }
 .card-body {
